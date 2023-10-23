@@ -11,14 +11,16 @@ public class Animal {
     private int id;
     private LocalDate dateDelivered;
     private String origin;
+    private double weight;
 
     public Animal() {
     }
 
-    public Animal(int id, LocalDate dateDelivered, String origin) {
+    public Animal(int id, LocalDate dateDelivered, String origin, double weight) {
         this.id = id;
         this.dateDelivered = dateDelivered;
         this.origin = origin;
+        this.weight = weight;
     }
     public int getId() {
         return id;
@@ -44,5 +46,11 @@ public class Animal {
         this.origin = origin;
     }
 
+    public double getWeight() {
+        return weight;
+    }
 
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 }

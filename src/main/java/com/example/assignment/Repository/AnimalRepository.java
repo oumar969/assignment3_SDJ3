@@ -14,10 +14,10 @@ public class AnimalRepository {
     private final List<Animal> animals = new ArrayList<>();
     public AnimalRepository() {
         // Adding some dummy data for testing
-        animals.add(new Animal(1, LocalDate.parse("2023-10-01"), "Farm A"));
-        animals.add(new Animal(2, LocalDate.parse("2023-10-02"), "Farm B"));
-        animals.add(new Animal(3, LocalDate.parse("2023-10-03"), "Farm A"));
-        animals.add(new Animal(4, LocalDate.parse("2023-10-04"), "Farm C"));
+        animals.add(new Animal(1, LocalDate.parse("2023-10-01"), "Farm A",50.2));
+        animals.add(new Animal(2, LocalDate.parse("2023-10-02"), "Farm B",60.2));
+        animals.add(new Animal(3, LocalDate.parse("2023-10-03"), "Farm A",70.2));
+        animals.add(new Animal(4, LocalDate.parse("2023-10-04"), "Farm C",80.2));
     }
     public List<Animal> getAllAnimals() {
         return animals;
