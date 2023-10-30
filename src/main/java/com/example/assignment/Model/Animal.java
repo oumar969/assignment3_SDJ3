@@ -4,21 +4,23 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
+
 @Entity
 public class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private LocalDate dateDelivered;
-    private String origin;
+    private String animalType;
+    @ManyToMany
+    private List<Product> products;
 
     public Animal() {
     }
 
-    public Animal(int id, LocalDate dateDelivered, String origin) {
+    public Animal(int id, String animalType) {
         this.id = id;
-        this.dateDelivered = dateDelivered;
-        this.origin = origin;
+        this.animalType = animalType;
     }
     public int getId() {
         return id;
@@ -28,21 +30,19 @@ public class Animal {
         this.id = id;
     }
 
-    public LocalDate getDateDelivered() {
-        return dateDelivered;
+    public String getAnimalType() {
+        return animalType;
     }
 
-    public void setDateDelivered(LocalDate dateDelivered) {
-        this.dateDelivered = dateDelivered;
+    public void setAnimalType(String animalType) {
+        this.animalType = animalType;
     }
 
-    public String getOrigin() {
-        return origin;
+    public List<Product> getProducts() {
+        return products;
     }
 
-    public void setOrigin(String origin) {
-        this.origin = origin;
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
-
-
 }

@@ -4,9 +4,18 @@ option java_multiple_files = true;
 
 package org.example;
 
-message Animal{
+message Animal
+{
   int32 id = 1;
   double weight = 2;
+  repeated Product products = 3;
+}
+
+message Product
+{
+  int32 id = 1;
+  string productName = 2;
+  repeated Animal animals = 3;
 }
 
 message HelloResponse
