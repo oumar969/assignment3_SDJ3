@@ -10,12 +10,14 @@ public class Product {
     @Id
     private int id;
     private String productName;
+    private String productType;
     @ManyToMany
     private List<Animal> animalsInProduct;
 
-    public Product(int id, String productName) {
+    public Product(int id, String productName, String productType) {
         this.id = id;
         this.productName = productName;
+        this.productType = productType;
     }
 
     public Product() {
@@ -44,5 +46,13 @@ public class Product {
 
     public int getId() {
         return id;
+    }
+
+    public String getProductType() {
+        return productType;
+    }
+
+    public void setProductType(String productType) {
+        this.productType = productType;
     }
 }
