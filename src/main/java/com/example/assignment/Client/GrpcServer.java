@@ -5,7 +5,7 @@ import io.grpc.ServerBuilder;
 
 import java.io.IOException;
 
-public class SlaughterhouseGrpc {
+public class GrpcServer {
     public static void main(String[] args) throws IOException, InterruptedException {
         Server server = ServerBuilder
                 .forPort(8080)
@@ -14,4 +14,5 @@ public class SlaughterhouseGrpc {
         server.start();
         server.awaitTermination();
     }
+
 }

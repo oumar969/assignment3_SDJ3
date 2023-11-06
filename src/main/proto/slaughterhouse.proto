@@ -49,8 +49,15 @@ message ProductListResponse {
 service AnimalService {
   rpc createAnimal(RegisterAnimalRequest) returns (AnimalResponse);
   rpc getAnimalById(AnimalIdRequest) returns (AnimalResponse);
+  rpc getAnimalsByDate(DateRequest) returns (AnimalListResponse);
+  rpc getAnimalsByType(AnimalIdRequest) returns (AnimalListResponse);
+  rpc getAnimalsByWeight(AnimalIdRequest) returns (AnimalListResponse);
+  rpc getAllAnimals(AnimalIdRequest) returns (AnimalListResponse);
 }
 
 service ProductService {
   rpc getProductsIncludingAnimalRegId(AnimalIdRequest) returns (ProductListResponse);
+  rpc getProductById(ProductIdRequest) returns (ProductResponse);
+  rpc getAllProducts(ProductIdRequest) returns (ProductListResponse);
+  rpc createProduct(ProductResponse) returns (ProductResponse);
 }

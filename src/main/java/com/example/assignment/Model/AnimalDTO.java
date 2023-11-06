@@ -15,15 +15,24 @@ public class AnimalDTO {
         this.weight = weight;
     }
 
-    public void setAnimalType(String animalType) {
-        this.animalType = animalType;
+    public String getAnimalType() {
+        return animalType;
     }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
+    public double getWeight() {
+        return weight;
+    }
+
+    @Override
+    public String toString() {
+        return "AnimalDTO{" +
+                "animalType='" + animalType + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", weight=" + weight +
+                '}';
     }
 }
