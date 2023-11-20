@@ -6,7 +6,8 @@ import com.example.assignment.Model.Product;
 
 import java.util.List;
 
-public interface ProductService {
+public interface ProductService
+{
 
     public Product makeProductHalfAnimal(AnimalDTO dto);
     public List<Product> getAllProductsWithAnimalRegNum(int regNum);
