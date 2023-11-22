@@ -11,7 +11,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.4.0)",
-    comments = "Source: slaughterhouse.proto")
+    comments = "Source: Slaghterhouse.proto")
 public final class AnimalServiceGrpc {
 
   private AnimalServiceGrpc() {}
@@ -38,6 +38,78 @@ public final class AnimalServiceGrpc {
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "org.example.AnimalService", "getAnimalById"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              AnimalIdRequest.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              AnimalResponse.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<DateRequest,
+          AnimalListResponse> METHOD_GET_ANIMALS_BY_DATE =
+      io.grpc.MethodDescriptor.<DateRequest, AnimalListResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "org.example.AnimalService", "getAnimalsByDate"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              DateRequest.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              AnimalListResponse.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<AnimalIdRequest,
+          AnimalListResponse> METHOD_GET_ANIMALS_BY_TYPE =
+      io.grpc.MethodDescriptor.<AnimalIdRequest, AnimalListResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "org.example.AnimalService", "getAnimalsByType"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              AnimalIdRequest.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              AnimalListResponse.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<AnimalIdRequest,
+          AnimalListResponse> METHOD_GET_ANIMALS_BY_WEIGHT =
+      io.grpc.MethodDescriptor.<AnimalIdRequest, AnimalListResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "org.example.AnimalService", "getAnimalsByWeight"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              AnimalIdRequest.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              AnimalListResponse.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<AnimalIdRequest,
+          AnimalListResponse> METHOD_GET_ALL_ANIMALS =
+      io.grpc.MethodDescriptor.<AnimalIdRequest, AnimalListResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "org.example.AnimalService", "getAllAnimals"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              AnimalIdRequest.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              AnimalListResponse.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<AnimalResponse,
+          AnimalResponse> METHOD_UPDATE_ANIMAL =
+      io.grpc.MethodDescriptor.<AnimalResponse, AnimalResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "org.example.AnimalService", "updateAnimal"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              AnimalResponse.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              AnimalResponse.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<AnimalIdRequest,
+          AnimalResponse> METHOD_DELETE_ANIMAL =
+      io.grpc.MethodDescriptor.<AnimalIdRequest, AnimalResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "org.example.AnimalService", "deleteAnimal"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               AnimalIdRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -85,6 +157,48 @@ public final class AnimalServiceGrpc {
       asyncUnimplementedUnaryCall(METHOD_GET_ANIMAL_BY_ID, responseObserver);
     }
 
+    /**
+     */
+    public void getAnimalsByDate(DateRequest request,
+                                 io.grpc.stub.StreamObserver<AnimalListResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GET_ANIMALS_BY_DATE, responseObserver);
+    }
+
+    /**
+     */
+    public void getAnimalsByType(AnimalIdRequest request,
+                                 io.grpc.stub.StreamObserver<AnimalListResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GET_ANIMALS_BY_TYPE, responseObserver);
+    }
+
+    /**
+     */
+    public void getAnimalsByWeight(AnimalIdRequest request,
+                                   io.grpc.stub.StreamObserver<AnimalListResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GET_ANIMALS_BY_WEIGHT, responseObserver);
+    }
+
+    /**
+     */
+    public void getAllAnimals(AnimalIdRequest request,
+                              io.grpc.stub.StreamObserver<AnimalListResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GET_ALL_ANIMALS, responseObserver);
+    }
+
+    /**
+     */
+    public void updateAnimal(AnimalResponse request,
+                             io.grpc.stub.StreamObserver<AnimalResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_UPDATE_ANIMAL, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteAnimal(AnimalIdRequest request,
+                             io.grpc.stub.StreamObserver<AnimalResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_DELETE_ANIMAL, responseObserver);
+    }
+
     @Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -101,6 +215,48 @@ public final class AnimalServiceGrpc {
                       AnimalIdRequest,
                       AnimalResponse>(
                   this, METHODID_GET_ANIMAL_BY_ID)))
+          .addMethod(
+            METHOD_GET_ANIMALS_BY_DATE,
+            asyncUnaryCall(
+              new MethodHandlers<
+                      DateRequest,
+                      AnimalListResponse>(
+                  this, METHODID_GET_ANIMALS_BY_DATE)))
+          .addMethod(
+            METHOD_GET_ANIMALS_BY_TYPE,
+            asyncUnaryCall(
+              new MethodHandlers<
+                      AnimalIdRequest,
+                      AnimalListResponse>(
+                  this, METHODID_GET_ANIMALS_BY_TYPE)))
+          .addMethod(
+            METHOD_GET_ANIMALS_BY_WEIGHT,
+            asyncUnaryCall(
+              new MethodHandlers<
+                      AnimalIdRequest,
+                      AnimalListResponse>(
+                  this, METHODID_GET_ANIMALS_BY_WEIGHT)))
+          .addMethod(
+            METHOD_GET_ALL_ANIMALS,
+            asyncUnaryCall(
+              new MethodHandlers<
+                      AnimalIdRequest,
+                      AnimalListResponse>(
+                  this, METHODID_GET_ALL_ANIMALS)))
+          .addMethod(
+            METHOD_UPDATE_ANIMAL,
+            asyncUnaryCall(
+              new MethodHandlers<
+                      AnimalResponse,
+                      AnimalResponse>(
+                  this, METHODID_UPDATE_ANIMAL)))
+          .addMethod(
+            METHOD_DELETE_ANIMAL,
+            asyncUnaryCall(
+              new MethodHandlers<
+                      AnimalIdRequest,
+                      AnimalResponse>(
+                  this, METHODID_DELETE_ANIMAL)))
           .build();
     }
   }
@@ -138,6 +294,54 @@ public final class AnimalServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_ANIMAL_BY_ID, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getAnimalsByDate(DateRequest request,
+                                 io.grpc.stub.StreamObserver<AnimalListResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GET_ANIMALS_BY_DATE, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getAnimalsByType(AnimalIdRequest request,
+                                 io.grpc.stub.StreamObserver<AnimalListResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GET_ANIMALS_BY_TYPE, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getAnimalsByWeight(AnimalIdRequest request,
+                                   io.grpc.stub.StreamObserver<AnimalListResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GET_ANIMALS_BY_WEIGHT, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getAllAnimals(AnimalIdRequest request,
+                              io.grpc.stub.StreamObserver<AnimalListResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GET_ALL_ANIMALS, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void updateAnimal(AnimalResponse request,
+                             io.grpc.stub.StreamObserver<AnimalResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_UPDATE_ANIMAL, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteAnimal(AnimalIdRequest request,
+                             io.grpc.stub.StreamObserver<AnimalResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_DELETE_ANIMAL, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -170,6 +374,48 @@ public final class AnimalServiceGrpc {
     public AnimalResponse getAnimalById(AnimalIdRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_ANIMAL_BY_ID, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public AnimalListResponse getAnimalsByDate(DateRequest request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GET_ANIMALS_BY_DATE, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public AnimalListResponse getAnimalsByType(AnimalIdRequest request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GET_ANIMALS_BY_TYPE, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public AnimalListResponse getAnimalsByWeight(AnimalIdRequest request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GET_ANIMALS_BY_WEIGHT, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public AnimalListResponse getAllAnimals(AnimalIdRequest request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GET_ALL_ANIMALS, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public AnimalResponse updateAnimal(AnimalResponse request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_UPDATE_ANIMAL, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public AnimalResponse deleteAnimal(AnimalIdRequest request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_DELETE_ANIMAL, getCallOptions(), request);
     }
   }
 
@@ -206,10 +452,64 @@ public final class AnimalServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_ANIMAL_BY_ID, getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<AnimalListResponse> getAnimalsByDate(
+        DateRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GET_ANIMALS_BY_DATE, getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<AnimalListResponse> getAnimalsByType(
+        AnimalIdRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GET_ANIMALS_BY_TYPE, getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<AnimalListResponse> getAnimalsByWeight(
+        AnimalIdRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GET_ANIMALS_BY_WEIGHT, getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<AnimalListResponse> getAllAnimals(
+        AnimalIdRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GET_ALL_ANIMALS, getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<AnimalResponse> updateAnimal(
+        AnimalResponse request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_UPDATE_ANIMAL, getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<AnimalResponse> deleteAnimal(
+        AnimalIdRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_DELETE_ANIMAL, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_ANIMAL = 0;
   private static final int METHODID_GET_ANIMAL_BY_ID = 1;
+  private static final int METHODID_GET_ANIMALS_BY_DATE = 2;
+  private static final int METHODID_GET_ANIMALS_BY_TYPE = 3;
+  private static final int METHODID_GET_ANIMALS_BY_WEIGHT = 4;
+  private static final int METHODID_GET_ALL_ANIMALS = 5;
+  private static final int METHODID_UPDATE_ANIMAL = 6;
+  private static final int METHODID_DELETE_ANIMAL = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -236,6 +536,30 @@ public final class AnimalServiceGrpc {
           serviceImpl.getAnimalById((AnimalIdRequest) request,
               (io.grpc.stub.StreamObserver<AnimalResponse>) responseObserver);
           break;
+        case METHODID_GET_ANIMALS_BY_DATE:
+          serviceImpl.getAnimalsByDate((DateRequest) request,
+              (io.grpc.stub.StreamObserver<AnimalListResponse>) responseObserver);
+          break;
+        case METHODID_GET_ANIMALS_BY_TYPE:
+          serviceImpl.getAnimalsByType((AnimalIdRequest) request,
+              (io.grpc.stub.StreamObserver<AnimalListResponse>) responseObserver);
+          break;
+        case METHODID_GET_ANIMALS_BY_WEIGHT:
+          serviceImpl.getAnimalsByWeight((AnimalIdRequest) request,
+              (io.grpc.stub.StreamObserver<AnimalListResponse>) responseObserver);
+          break;
+        case METHODID_GET_ALL_ANIMALS:
+          serviceImpl.getAllAnimals((AnimalIdRequest) request,
+              (io.grpc.stub.StreamObserver<AnimalListResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_ANIMAL:
+          serviceImpl.updateAnimal((AnimalResponse) request,
+              (io.grpc.stub.StreamObserver<AnimalResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_ANIMAL:
+          serviceImpl.deleteAnimal((AnimalIdRequest) request,
+              (io.grpc.stub.StreamObserver<AnimalResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -255,7 +579,7 @@ public final class AnimalServiceGrpc {
   private static final class AnimalServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
     @Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return Slaughterhouse.getDescriptor();
+      return Slaghterhouse.getDescriptor();
     }
   }
 
@@ -271,6 +595,12 @@ public final class AnimalServiceGrpc {
               .setSchemaDescriptor(new AnimalServiceDescriptorSupplier())
               .addMethod(METHOD_CREATE_ANIMAL)
               .addMethod(METHOD_GET_ANIMAL_BY_ID)
+              .addMethod(METHOD_GET_ANIMALS_BY_DATE)
+              .addMethod(METHOD_GET_ANIMALS_BY_TYPE)
+              .addMethod(METHOD_GET_ANIMALS_BY_WEIGHT)
+              .addMethod(METHOD_GET_ALL_ANIMALS)
+              .addMethod(METHOD_UPDATE_ANIMAL)
+              .addMethod(METHOD_DELETE_ANIMAL)
               .build();
         }
       }

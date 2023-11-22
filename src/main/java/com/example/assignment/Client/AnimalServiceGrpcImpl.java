@@ -1,7 +1,6 @@
 package com.example.assignment.Client;
 
 import com.example.assignment.Service.AnimalService;
-import org.example.AnimalServiceGrpc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 

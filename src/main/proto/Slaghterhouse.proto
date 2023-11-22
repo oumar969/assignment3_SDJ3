@@ -53,6 +53,8 @@ service AnimalService {
   rpc getAnimalsByType(AnimalIdRequest) returns (AnimalListResponse);
   rpc getAnimalsByWeight(AnimalIdRequest) returns (AnimalListResponse);
   rpc getAllAnimals(AnimalIdRequest) returns (AnimalListResponse);
+  rpc updateAnimal(AnimalResponse) returns (AnimalResponse);
+  rpc deleteAnimal(AnimalIdRequest) returns (AnimalResponse);
 }
 
 service ProductService {
@@ -60,4 +62,11 @@ service ProductService {
   rpc getProductById(ProductIdRequest) returns (ProductResponse);
   rpc getAllProducts(ProductIdRequest) returns (ProductListResponse);
   rpc createProduct(ProductResponse) returns (ProductResponse);
+  rpc updateProduct(ProductResponse) returns (ProductResponse);
+  rpc deleteProduct(ProductIdRequest) returns (ProductResponse);
 }
+
+service SlaughterService {
+  rpc slaughterAnimal(AnimalIdRequest) returns (AnimalResponse);
+}
+

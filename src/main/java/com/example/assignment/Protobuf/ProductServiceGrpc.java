@@ -11,7 +11,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.4.0)",
-    comments = "Source: slaughterhouse.proto")
+    comments = "Source: Slaghterhouse.proto")
 public final class ProductServiceGrpc {
 
   private ProductServiceGrpc() {}
@@ -30,6 +30,66 @@ public final class ProductServiceGrpc {
               AnimalIdRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               ProductListResponse.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<ProductIdRequest,
+          ProductResponse> METHOD_GET_PRODUCT_BY_ID =
+      io.grpc.MethodDescriptor.<ProductIdRequest, ProductResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "org.example.ProductService", "getProductById"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              ProductIdRequest.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              ProductResponse.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<ProductIdRequest,
+          ProductListResponse> METHOD_GET_ALL_PRODUCTS =
+      io.grpc.MethodDescriptor.<ProductIdRequest, ProductListResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "org.example.ProductService", "getAllProducts"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              ProductIdRequest.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              ProductListResponse.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<ProductResponse,
+          ProductResponse> METHOD_CREATE_PRODUCT =
+      io.grpc.MethodDescriptor.<ProductResponse, ProductResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "org.example.ProductService", "createProduct"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              ProductResponse.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              ProductResponse.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<ProductResponse,
+          ProductResponse> METHOD_UPDATE_PRODUCT =
+      io.grpc.MethodDescriptor.<ProductResponse, ProductResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "org.example.ProductService", "updateProduct"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              ProductResponse.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              ProductResponse.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<ProductIdRequest,
+          ProductResponse> METHOD_DELETE_PRODUCT =
+      io.grpc.MethodDescriptor.<ProductIdRequest, ProductResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "org.example.ProductService", "deleteProduct"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              ProductIdRequest.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              ProductResponse.getDefaultInstance()))
           .build();
 
   /**
@@ -66,6 +126,41 @@ public final class ProductServiceGrpc {
       asyncUnimplementedUnaryCall(METHOD_GET_PRODUCTS_INCLUDING_ANIMAL_REG_ID, responseObserver);
     }
 
+    /**
+     */
+    public void getProductById(ProductIdRequest request,
+                               io.grpc.stub.StreamObserver<ProductResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GET_PRODUCT_BY_ID, responseObserver);
+    }
+
+    /**
+     */
+    public void getAllProducts(ProductIdRequest request,
+                               io.grpc.stub.StreamObserver<ProductListResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GET_ALL_PRODUCTS, responseObserver);
+    }
+
+    /**
+     */
+    public void createProduct(ProductResponse request,
+                              io.grpc.stub.StreamObserver<ProductResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_CREATE_PRODUCT, responseObserver);
+    }
+
+    /**
+     */
+    public void updateProduct(ProductResponse request,
+                              io.grpc.stub.StreamObserver<ProductResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_UPDATE_PRODUCT, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteProduct(ProductIdRequest request,
+                              io.grpc.stub.StreamObserver<ProductResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_DELETE_PRODUCT, responseObserver);
+    }
+
     @Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -75,6 +170,41 @@ public final class ProductServiceGrpc {
                       AnimalIdRequest,
                       ProductListResponse>(
                   this, METHODID_GET_PRODUCTS_INCLUDING_ANIMAL_REG_ID)))
+          .addMethod(
+            METHOD_GET_PRODUCT_BY_ID,
+            asyncUnaryCall(
+              new MethodHandlers<
+                      ProductIdRequest,
+                      ProductResponse>(
+                  this, METHODID_GET_PRODUCT_BY_ID)))
+          .addMethod(
+            METHOD_GET_ALL_PRODUCTS,
+            asyncUnaryCall(
+              new MethodHandlers<
+                      ProductIdRequest,
+                      ProductListResponse>(
+                  this, METHODID_GET_ALL_PRODUCTS)))
+          .addMethod(
+            METHOD_CREATE_PRODUCT,
+            asyncUnaryCall(
+              new MethodHandlers<
+                      ProductResponse,
+                      ProductResponse>(
+                  this, METHODID_CREATE_PRODUCT)))
+          .addMethod(
+            METHOD_UPDATE_PRODUCT,
+            asyncUnaryCall(
+              new MethodHandlers<
+                      ProductResponse,
+                      ProductResponse>(
+                  this, METHODID_UPDATE_PRODUCT)))
+          .addMethod(
+            METHOD_DELETE_PRODUCT,
+            asyncUnaryCall(
+              new MethodHandlers<
+                      ProductIdRequest,
+                      ProductResponse>(
+                  this, METHODID_DELETE_PRODUCT)))
           .build();
     }
   }
@@ -104,6 +234,46 @@ public final class ProductServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_PRODUCTS_INCLUDING_ANIMAL_REG_ID, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getProductById(ProductIdRequest request,
+                               io.grpc.stub.StreamObserver<ProductResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GET_PRODUCT_BY_ID, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getAllProducts(ProductIdRequest request,
+                               io.grpc.stub.StreamObserver<ProductListResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GET_ALL_PRODUCTS, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void createProduct(ProductResponse request,
+                              io.grpc.stub.StreamObserver<ProductResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_CREATE_PRODUCT, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void updateProduct(ProductResponse request,
+                              io.grpc.stub.StreamObserver<ProductResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_UPDATE_PRODUCT, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteProduct(ProductIdRequest request,
+                              io.grpc.stub.StreamObserver<ProductResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_DELETE_PRODUCT, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -129,6 +299,41 @@ public final class ProductServiceGrpc {
     public ProductListResponse getProductsIncludingAnimalRegId(AnimalIdRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_PRODUCTS_INCLUDING_ANIMAL_REG_ID, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ProductResponse getProductById(ProductIdRequest request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GET_PRODUCT_BY_ID, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ProductListResponse getAllProducts(ProductIdRequest request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GET_ALL_PRODUCTS, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ProductResponse createProduct(ProductResponse request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_CREATE_PRODUCT, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ProductResponse updateProduct(ProductResponse request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_UPDATE_PRODUCT, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ProductResponse deleteProduct(ProductIdRequest request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_DELETE_PRODUCT, getCallOptions(), request);
     }
   }
 
@@ -157,9 +362,54 @@ public final class ProductServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_PRODUCTS_INCLUDING_ANIMAL_REG_ID, getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ProductResponse> getProductById(
+        ProductIdRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GET_PRODUCT_BY_ID, getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ProductListResponse> getAllProducts(
+        ProductIdRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GET_ALL_PRODUCTS, getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ProductResponse> createProduct(
+        ProductResponse request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_CREATE_PRODUCT, getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ProductResponse> updateProduct(
+        ProductResponse request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_UPDATE_PRODUCT, getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ProductResponse> deleteProduct(
+        ProductIdRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_DELETE_PRODUCT, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_PRODUCTS_INCLUDING_ANIMAL_REG_ID = 0;
+  private static final int METHODID_GET_PRODUCT_BY_ID = 1;
+  private static final int METHODID_GET_ALL_PRODUCTS = 2;
+  private static final int METHODID_CREATE_PRODUCT = 3;
+  private static final int METHODID_UPDATE_PRODUCT = 4;
+  private static final int METHODID_DELETE_PRODUCT = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -182,6 +432,26 @@ public final class ProductServiceGrpc {
           serviceImpl.getProductsIncludingAnimalRegId((AnimalIdRequest) request,
               (io.grpc.stub.StreamObserver<ProductListResponse>) responseObserver);
           break;
+        case METHODID_GET_PRODUCT_BY_ID:
+          serviceImpl.getProductById((ProductIdRequest) request,
+              (io.grpc.stub.StreamObserver<ProductResponse>) responseObserver);
+          break;
+        case METHODID_GET_ALL_PRODUCTS:
+          serviceImpl.getAllProducts((ProductIdRequest) request,
+              (io.grpc.stub.StreamObserver<ProductListResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_PRODUCT:
+          serviceImpl.createProduct((ProductResponse) request,
+              (io.grpc.stub.StreamObserver<ProductResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_PRODUCT:
+          serviceImpl.updateProduct((ProductResponse) request,
+              (io.grpc.stub.StreamObserver<ProductResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_PRODUCT:
+          serviceImpl.deleteProduct((ProductIdRequest) request,
+              (io.grpc.stub.StreamObserver<ProductResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -201,7 +471,7 @@ public final class ProductServiceGrpc {
   private static final class ProductServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
     @Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return Slaughterhouse.getDescriptor();
+      return Slaghterhouse.getDescriptor();
     }
   }
 
@@ -216,6 +486,11 @@ public final class ProductServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ProductServiceDescriptorSupplier())
               .addMethod(METHOD_GET_PRODUCTS_INCLUDING_ANIMAL_REG_ID)
+              .addMethod(METHOD_GET_PRODUCT_BY_ID)
+              .addMethod(METHOD_GET_ALL_PRODUCTS)
+              .addMethod(METHOD_CREATE_PRODUCT)
+              .addMethod(METHOD_UPDATE_PRODUCT)
+              .addMethod(METHOD_DELETE_PRODUCT)
               .build();
         }
       }
